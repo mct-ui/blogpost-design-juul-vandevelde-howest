@@ -375,6 +375,13 @@ a:active {
 }
 
 /* gutter modifiers, these affect o-layout__item too */
+// .o-layout--gutter{
+//   margin: 0 -0.75rem 0 -0.75rem;
+
+//   & > .o-layout__item {
+//     padding: 0 0.75rem;
+//   }
+// }
 
 .o-layout--gutter {
   margin-left: calc($grid-gutter / -2);
