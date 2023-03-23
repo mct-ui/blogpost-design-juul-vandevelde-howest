@@ -25,6 +25,20 @@ img {
   max-width: 100%;
 }
 
+@font-face {
+  font-family: "Inter Web";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter Web";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+}
 /*---------------------------------------/*
  # ELEMENTS
 /*---------------------------------------*/
@@ -36,9 +50,11 @@ img {
 html {
   font-size: 100%;
   line-height: 1.5;
-  font-family: Helvetica, arial, sans-serif;
+  font-family: "Droid-Serif", Helvetica, arial, sans-serif;
   color: hsl(198.0786026201, 10%, 30%);
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*
@@ -58,9 +74,20 @@ html {
     ---
     Default markup for typographic elements
 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: hsl(198.0786026201, 10%, 10%);
+  font-family: "Inter Web", Times, serif;
+}
+
 h1 {
   font-size: 1.8020324707rem;
   font-weight: 700;
+  font-family: "Playfair Display", serif;
   line-height: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -312,6 +339,19 @@ a:active {
 /*
     Components: Author
 */
+.c-author {
+  display: flex;
+  align-items: center;
+}
+.c-author__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+.c-author__name, .c-author__meta {
+  margin-bottom: 0;
+}
+
 /*
     Components: Quote
 */
@@ -337,6 +377,10 @@ a:active {
     Scope: Content
     Specific behaviour inside s-content class
 */
+.s-content * + h2 {
+  margin-top: 3rem;
+}
+
 /*---------------------------------------/*
  # UTILITIES
 /*---------------------------------------*/
