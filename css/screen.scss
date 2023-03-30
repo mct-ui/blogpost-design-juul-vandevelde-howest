@@ -524,6 +524,8 @@ a:active {
 .c-author {
   display: flex;
   align-items: center;
+  margin-bottom: $space-m;
+  gap: $space-s;
 
   &__image {
     width: 56px;
@@ -534,6 +536,18 @@ a:active {
   &__name,
   &__meta {
     margin-bottom: 0;
+  }
+
+  &__meta {
+    font-size: $ms-1;
+    font-family: $font-family-secondary;
+    line-height: $space-m;
+    margin-top: $space-xxs;
+  }
+
+  &__name {
+    font-size: $ms0;
+    line-height: $space-m;
   }
 }
 
