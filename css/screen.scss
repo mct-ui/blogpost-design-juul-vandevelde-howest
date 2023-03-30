@@ -527,6 +527,11 @@ a:active {
   margin-bottom: $space-m;
   gap: $space-s;
 
+  @include mq(bp3) {
+    flex-direction: column;
+    align-items: start;
+  }
+
   &__image {
     width: 56px;
     height: 56px;
@@ -548,6 +553,50 @@ a:active {
   &__name {
     font-size: $ms0;
     line-height: $space-m;
+  }
+}
+
+/*
+    Components: Article
+*/
+.c-article {
+  &__header,
+  &__body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    padding: $space-m $space-m 0;
+    @include mq(bp2) {
+      padding: $space-xl $space-xl $space-l;
+    }
+  }
+
+  &__body {
+    padding: 0 $space-m;
+    @include mq(bp2) {
+      padding: $space-m $space-xl;
+    }
+    @include mq(bp3) {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
+  &__author {
+    @include mq(bp2) {
+      padding-bottom: $space-m;
+    }
+    @include mq(bp3) {
+      width: 25%;
+    }
+  }
+
+  &__content {
+    @include mq(bp3) {
+      width: 75%;
+    }
   }
 }
 
