@@ -406,7 +406,7 @@ a:active {
 }
 @media (min-width: 62.0625em) {
   .c-article__author {
-    width: 25%;
+    width: 20.75%;
   }
 }
 @media (min-width: 62.0625em) {
@@ -442,6 +442,12 @@ a:active {
 */
 .s-content * + h2 {
   margin-top: 3rem;
+}
+
+@media (max-width: 992px) {
+  .s-content {
+    margin: 0 auto;
+  }
 }
 
 /*---------------------------------------/*

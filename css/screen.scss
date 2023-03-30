@@ -589,7 +589,7 @@ a:active {
       padding-bottom: $space-m;
     }
     @include mq(bp3) {
-      width: 25%;
+      width: 20.75%;
     }
   }
 
@@ -630,6 +630,12 @@ a:active {
 
 .s-content * + h2 {
   margin-top: $space-xl;
+}
+
+.s-content {
+  @media (max-width: 992px) {
+    margin: 0 auto;
+  }
 }
 
 /*---------------------------------------/*
